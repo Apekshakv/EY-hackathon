@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analysis Result</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<button class="dark-btn" onclick="toggleDark()">🌙</button>
+
+<div class="grid">
+
+  
+  <div class="card">
+    <h2>Chat</h2>
+    <p><b>User:</b> <%= result.chat.user %></p>
+    <p class="ai"><b>AI:</b> <%= result.chat.ai %></p>
+    <p><b>Location:</b> <%= result.location %></p>
+  </div>
+
+  <!-- AGENT STATUS -->
+  <div class="card">
+    <h2>Agent Status</h2>
+    <ul>
+      <% result.agent_status.forEach(a => { %>
+        <li>✅ <%= a %></li>
+      <% }) %>
+    </ul>
+
+    <div class="recommendation <%= result.recommendation_type %>">
+      <b>Final Advice:</b><br>
+      <%= result.recommendation %>
+    </div>
+  </div>
+
+  <!-- INSIGHTS + EMERGENCY -->
+  <div class="card">
+    <h2>Insights</h2>
+    <ul>
+      <% result.insights.forEach(i => { %>
+        <li>✔ <%= i %></li>
+      <% }) %>
+    </ul>
+
+    <p class="score">
+      Confidence Score:
+      <span><%= result.confidence_score %></span>
+    </p>
+
+    <button class="emergency" onclick="callAmbulance()">
+      🚑 Emergency – Call Ambulance
+    </button>
+
+    <button class="hospital" onclick="findHospitals()">
+      🏥 Find Nearby Hospitals
+    </button>
+
+    <ul id="hospitalList"></ul>
+  </div>
+
+</div>
+
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+function callAmbulance() {
+  alert(
+    "🚑 Emergency triggered!\nNearest emergency services notified (simulation)."
+  );
+}
+
+function findHospitals() {
+  const loc = "<%= result.location %>";
+  if (loc === "Location not shared") {
+    alert("Please share location first");
+    return;
+  }
+
+  const lat = loc.split(",")[0].split(":")[1];
+  const lon = loc.split(",")[1].split(":")[1];
+
+  const url = `https://nominatim.openstreetmap.org/search?format=json&q=hospital&limit=5&lat=${lat}&lon=${lon}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      const list = document.getElementById("hospitalList");
+      list.innerHTML = "";
+
+      if (data.length === 0) {
+        list.innerHTML = "<li>No hospitals found nearby.</li>";
+        return;
+      }
+
+      data.forEach(h => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          🏥 ${h.display_name}<br>
+          <a href="https://www.google.com/maps?q=${h.lat},${h.lon}" target="_blank">
+            Open in Maps
+          </a>
+        `;
+        list.appendChild(li);
+      });
+    })
+    .catch(() => alert("Unable to fetch hospital data"));
+}
+</script>
+
+</body>
+</html>

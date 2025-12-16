@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agentic AI</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+<button class="dark-btn" onclick="toggleDark()">🌙</button>
+
+<div class="container">
+  <h1>Agentic AI for Drug Repurposing</h1>
+
+  <form action="/analyze" method="POST">
+    <select name="medicine" required>
+      <option value="">Select Medicine</option>
+      <% medicines.forEach(m => { %>
+        <option value="<%= m %>"><%= m %></option>
+      <% }) %>
+    </select>
+
+    <!-- hidden location -->
+    <input type="hidden" id="lat" name="latitude">
+    <input type="hidden" id="lon" name="longitude">
+
+    <button type="button" onclick="getLocation()">📍 Get My Location</button>
+    <button type="submit">Analyze</button>
+  </form>
+</div>
+
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        document.getElementById("lat").value = pos.coords.latitude;
+        document.getElementById("lon").value = pos.coords.longitude;
+        alert("Location captured!");
+      },
+      () => alert("Location permission denied")
+    );
+  } else {
+    alert("Geolocation not supported");
+  }
+}
+</script>
+
+</body>
+</html>

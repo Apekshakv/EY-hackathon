@@ -1,0 +1,217 @@
+{
+  "Metformin": {
+    "chat": {
+      "user": "Metformin for Oncology",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Type 2 Diabetes",
+    "repurposing_target": "Oncology (Various Cancers)",
+    "key_mechanism_class": "AMPK Activator",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "AMPK activation linked to tumor metabolism regulation",
+      "Existing long-term safety data available",
+      "Low regulatory barrier due to prior approval",
+      "High interest in oncology adjunct therapies"
+    ],
+    "confidence_score": 0.88
+  },
+
+  "Losartan": {
+    "chat": {
+      "user": "Losartan for Diabetic Nephropathy",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Hypertension",
+    "repurposing_target": "Diabetic Nephropathy",
+    "key_mechanism_class": "Angiotensin Receptor Blocker (ARB)",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Renoprotective effects demonstrated in diabetic patients",
+      "Strong clinical evidence in kidney disease",
+      "Minimal regulatory risk",
+      "Large chronic kidney disease market"
+    ],
+    "confidence_score": 0.86
+  },
+
+  "Atorvastatin": {
+    "chat": {
+      "user": "Atorvastatin for Alzheimer's Disease",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Hyperlipidemia",
+    "repurposing_target": "Alzheimer's Disease",
+    "key_mechanism_class": "HMG-CoA Reductase Inhibitor",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Cholesterol metabolism implicated in neurodegeneration",
+      "Mixed but promising clinical signals",
+      "Well-established cardiovascular safety",
+      "High unmet neurological market need"
+    ],
+    "confidence_score": 0.73
+  },
+
+  "Amlodipine": {
+    "chat": {
+      "user": "Amlodipine for Raynaud's Phenomenon",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Hypertension",
+    "repurposing_target": "Raynaud's Phenomenon",
+    "key_mechanism_class": "Calcium Channel Blocker (CCB)",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Peripheral vasodilation improves blood flow",
+      "Off-label vascular use already documented",
+      "Low safety concerns",
+      "Niche but clinically relevant market"
+    ],
+    "confidence_score": 0.75
+  },
+
+  "Sildenafil": {
+    "chat": {
+      "user": "Sildenafil for Alzheimer's Disease",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Erectile Dysfunction / PAH",
+    "repurposing_target": "Alzheimer's Disease / Peripheral Neuropathy",
+    "key_mechanism_class": "PDE5 Inhibitor",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Improved cerebral blood flow observed",
+      "Neuroprotective hypotheses under investigation",
+      "Established human safety profile",
+      "Growing neurodegenerative disease burden"
+    ],
+    "confidence_score": 0.77
+  },
+
+  "Diclofenac": {
+    "chat": {
+      "user": "Diclofenac for Actinic Keratosis",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Pain / Inflammation",
+    "repurposing_target": "Actinic Keratosis",
+    "key_mechanism_class": "NSAID",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "COX inhibition reduces abnormal keratinocyte growth",
+      "Topical formulations already approved",
+      "Low regulatory complexity",
+      "Dermatology outpatient market opportunity"
+    ],
+    "confidence_score": 0.82
+  },
+
+  "Aspirin": {
+    "chat": {
+      "user": "Aspirin for Colorectal Cancer Prevention",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Analgesic / Antiplatelet",
+    "repurposing_target": "Colorectal Cancer Prevention",
+    "key_mechanism_class": "COX Inhibitor",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Anti-inflammatory action linked to cancer prevention",
+      "Strong epidemiological evidence",
+      "Low cost and wide availability",
+      "Preventive oncology market potential"
+    ],
+    "confidence_score": 0.84
+  },
+
+  "Ibuprofen": {
+    "chat": {
+      "user": "Ibuprofen for Chronic Back Pain",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Pain / Inflammation",
+    "repurposing_target": "Chronic Back Pain",
+    "key_mechanism_class": "NSAID",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Prostaglandin inhibition supports pain control",
+      "Extensive real-world usage data",
+      "Known GI risks manageable",
+      "Large musculoskeletal disorder market"
+    ],
+    "confidence_score": 0.78
+  },
+
+  "Paracetamol": {
+    "chat": {
+      "user": "Paracetamol for Neuropathic Pain",
+      "ai": "Analysis completed using Agentic AI."
+    },
+    "original_indication": "Analgesic / Antipyretic",
+    "repurposing_target": "Neuropathic Pain",
+    "key_mechanism_class": "Non-opioid Analgesic",
+    "agent_status": [
+      "Scientific Agent completed",
+      "Clinical Agent completed",
+      "Regulatory Agent completed",
+      "Patent Agent completed",
+      "Market Agent completed"
+    ],
+    "insights": [
+      "Central pain modulation mechanisms suggested",
+      "Excellent long-term safety",
+      "Low abuse potential",
+      "High unmet neuropathic pain demand"
+    ],
+    "confidence_score": 0.76
+  }
+}
